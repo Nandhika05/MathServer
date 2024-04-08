@@ -32,7 +32,6 @@ Publish the website in the given URL.
 ## PROGRAM :
 ```
 # math.html
-
 <html>
 <head>
 <meta charset='utf-8'>
@@ -73,10 +72,11 @@ padding-top: 20px;
 }
 </style>
 </head>
+<h2><center>Nandhika P (212223040125)</center></h2>
 <body>
 <div class="edge">
 <div class="box">
-<h1>Area of a squareprism</h1>
+<h1>Surface Area of Right Cylinder</h1>
 <form method="POST">
 {% csrf_token %}
 <div class="formelt">
@@ -98,7 +98,6 @@ Area : <input type="text" name="area" value="{{area}}"></input>m<sup>2</sup><br/
 </html>
 
 # views.py
-
 from django.shortcuts import render
 def surfacearea(request):
     context = {}
@@ -124,8 +123,7 @@ def surfacearea(request):
     
     return render(request, 'mathapp/math.html',context)
 
-#urls.py 
-
+# urls.py
 from django.contrib import admin
 from django.urls import path
 from mathapp import views
@@ -134,7 +132,6 @@ urlpatterns = [
     path('surfacearea',views.surfacearea,name="surfacearea"),
     path('',views.surfacearea,name="surfacearearoot")
 ]
-
 ```
 ## SERVER SIDE PROCESSING:
 
